@@ -1,0 +1,155 @@
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f6fa;
+  color: #222;
+}
+
+/* Headline */
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+/* Container */
+.container {
+  max-width: 570px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+select,
+.form-submit {
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 14px;
+  background: white;
+  transition: border-color 0.2s;
+}
+select:focus,
+.form-submit:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+.form-submit {
+  cursor: pointer;
+}
+
+/* Cards */
+.cards {
+  width: 100%;
+}
+.card-item {
+  width: 100%;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.card-activity {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Error (optional) */
+.tag-error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Hidden Utility */
+.is-element-hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 620px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(100px);
+  animation: float 25s infinite alternate ease-in-out;
+}
+
+.circle1 {
+  width: 400px;
+  height: 400px;
+  background: #a0c4ff;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  background: #bdb2ff;
+  bottom: 20%;
+  right: 10%;
+  animation-delay: 5s;
+}
+
+.circle3 {
+  width: 250px;
+  height: 250px;
+  background: #ffc6ff;
+  top: 40%;
+  left: 60%;
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(60px, -60px) scale(1.1);
+  }
+}
